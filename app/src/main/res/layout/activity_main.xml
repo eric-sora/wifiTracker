@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="MainActivity">
+    <TextView
+        android:id="@+id/txtlong1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:text="Longitude: "
+        android:textColor="#0000FF"
+        android:textSize="20sp" />
+    <TextView
+        android:id="@+id/txtlong"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/txtlong1"
+        android:textColor="#0000FF"
+        android:textSize="20sp" />
+    <TextView
+        android:id="@+id/txtlati1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:text="Latitude: "
+        android:layout_below="@id/txtlong1"
+        android:textColor="#0000FF"
+        android:textSize="20sp" />
+    <TextView android:id="@+id/txtlati"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#0000FF"
+        android:textSize="20sp"
+        android:layout_toRightOf="@+id/txtlati1"
+        android:layout_below="@id/txtlong"
+      />
+
+    <Button android:id="@+id/btnstart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:text="Start" />
+    <ListView
+        android:id="@+id/wifiDetails"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/txtlati1"
+        >
+    </ListView>
+    <EditText
+        android:id="@+id/edittime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/btnstart"
+        android:hint="Input interval (in sec)"
+        android:layout_alignParentRight="true"
+        android:inputType="number"
+        android:maxLength="2"
+        />
+    <Button android:id="@+id/btnstarttimer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/edittime"
+        android:layout_alignParentRight="true"
+        android:text="Confirm" />
+    <Button android:id="@+id/btnsave"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/btnstarttimer"
+        android:layout_alignParentRight="true"
+        android:text="Save"
+        android:onClick="save"/>
+    <Button android:id="@+id/btnload"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/btnsave"
+        android:layout_alignParentRight="true"
+        android:text="Load"
+        android:onClick="load"/>
+    <Button android:id="@+id/btnemail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/btnload"
+        android:layout_alignParentRight="true"
+        android:text="email"
+        android:onClick="Email"/>
+    <TextView
+        android:id="@+id/txttest"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:textColor="#0000FF"
+        android:layout_below="@id/btnload"
+        android:textSize="20sp" />
+</RelativeLayout>
